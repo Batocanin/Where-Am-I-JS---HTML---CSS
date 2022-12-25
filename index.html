@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What country am I in?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="header--secondary header__h2">What country am I in?</h2>
+      <div class="country--info">
+        <h1 class="header--primary header__h1"></h1>
+        <img class="country-icon" />
+      </div>
+    </header>
+    <main>
+      <div class="find--section">
+        <div class="coordinates cordinate--search">
+          <input type="text" class="cordinate cord-latitude" id="latitude" placeholder="Latitude" />
+          <span class="cordinate-info">number between -90 and 90</span>
+          <input type="text" class="cordinate cord-longitude" id="longitude" placeholder="Longitude" />
+          <span class="cordinate-info">number between -180 and 180</span>
+
+          <div class="checkForError">
+            <span class="inputError"></span>
+          </div>
+          <button class="btn btn-findCountry">Find</button>
+        </div>
+        <div class="coordinates countryName--search">
+          <input type="text" class="cordinate countryNameInput" id="countryName" placeholder="Enter Country Name (eg. United States of America)" />
+          <div class="checkForError">
+            <span class="inputErrorCountry"></span>
+          </div>
+          <button class="btn btn-findCountryByName">Find Country</button>
+        </div>
+      </div>
+
+      <div class="container--buttons">
+        <div class="buttons">
+          <button class="btn btn-myLocation" id="myLocation">My Location</button>
+          <button class="btn btn-randomLocation" id="randomLocation">Random Location</button>
+          <button class="btn btn-resetLocation" id="resetLocation">Reset Location</button>
+        </div>
+      </div>
+    </main>
+    <section class="countryContainer"></section>
+    <footer>
+      <h3>&copy; 2022 Designed by Dušan Batočanin</h3>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

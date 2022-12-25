@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: rgb(22, 39, 54);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+/* 
+Primary: 4rem
+Secondary: 3rem
+*/
+/* Reuasble */
+.header--primary {
+  font-size: 4rem;
+}
+.header--secondary {
+  font-size: 3rem;
+}
+.btn {
+  display: block;
+  width: 100%;
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+/*  */
+body {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 0 0 2rem 0;
+  /* Obrisati */
+}
+
+/* Header */
+header {
+  padding: 2rem 0;
+}
+.header__h1 {
+  text-align: center;
+}
+.header__h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.country-icon {
+  width: 48px;
+  height: 32px;
+}
+.country--info {
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: 1s;
+}
+/*  */
+
+/* Main */
+main {
+  width: 80rem;
+  margin: 8rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: space-between;
+}
+.container--buttons {
+  width: 90%;
+  margin: 0 auto;
+}
+/*  */
+/* Main Section - Coordinates */
+.find--section {
+  display: flex;
+  gap: 2rem;
+}
+.coordinates {
+  position: relative;
+  width: 100%;
+  background-color: rgb(34, 60, 83);
+  padding: 2rem;
+}
+.cordinate {
+  width: 100%;
+  display: block;
+  color: #fff;
+  background-color: rgb(22, 38, 53);
+  padding: 1.5rem 0;
+  border-radius: 1.5rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  border: none;
+  font-weight: 600;
+}
+.cordinate-info {
+  font-size: 1.3rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.cordinate::placeholder {
+  color: rgb(228, 228, 228);
+  text-align: center;
+  font-weight: 600;
+}
+.btn-findCountry {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: purple;
+}
+.btn-findCountryByName {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: orangered;
+}
+.inputError,
+.inputErrorCountry {
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: orangered;
+  font-weight: 600;
+}
+
+.cordinate--search::before {
+  width: 100%;
+  content: 'Search for country by cordinates';
+  position: absolute;
+  top: -3rem;
+  left: -0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.countryName--search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.countryName--search::before {
+  width: 100%;
+  content: 'Search for country by name';
+  position: absolute;
+  top: -3rem;
+  left: -0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+/*  */
+/* Main Section - Buttons  */
+.btn:last-child {
+  margin-bottom: 0;
+}
+.btn-myLocation {
+  background-color: #095172;
+}
+.btn-randomLocation {
+  background-color: rgb(210, 105, 30);
+}
+.btn-resetLocation {
+  background-color: rgb(185, 35, 68);
+}
+/*  */
+/* Country display section */
+.countryContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.country {
+  position: relative;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+}
+.country__img {
+  width: 30rem;
+  height: 17rem;
+  object-fit: cover;
+  background-color: #eee;
+}
+.country__data {
+  padding: 2.5rem 3.75rem 3rem 3.75rem;
+}
+.country__name {
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
+}
+.country__region {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: #888;
+}
+.neighbour {
+  transform: scale(0.8) translateY(1rem);
+  margin-left: 0;
+}
+.neighbour::before {
+  width: 100%;
+  content: 'Neighbour country';
+  position: absolute;
+  top: -3rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+footer {
+  font-size: 1.1rem;
+  margin-top: 10rem;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .countryContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .country__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .countryContainer {
+    padding: 0 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 750px) {
+  header {
+    width: 100%;
+  }
+  body {
+    width: 100%;
+  }
+  .find--section {
+    flex-direction: column;
+  }
+  main {
+    width: 100%;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  .header__h1 {
+    font-size: 2.5rem;
+  }
+  .countryContainer {
+    padding: 0 2rem;
+    grid-template-columns: 1fr;
+  }
+  .cordinate--search {
+    margin-bottom: 3rem;
+  }
+  .country__img {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+    background-color: #eee;
+  }
+  .country--info {
+    flex-direction: column;
+    margin: 4rem 0 2rem 0;
+  }
+}
